@@ -10,17 +10,21 @@
 <body>
     <div class="sidebar">
             <div class="navigation">
-                <div class="list">
+                <div class="list" id="side-home">
                     <p>Home</p>
+                    <img src="img/icon_home.png">
                 </div>
-                <div class="list">
+                <div class="list" id="side-dash">
                     <p>Dashboard</p>
+                    <img src="img/icon_dashboard.png">
                 </div>
-                <div class="list">
+                <div class="list" id="side-acc">
                     <p>Account</p>
+                    <img src="img/icon_customers.png">
                 </div>
-                <div class="list">
+                <div class="list" id="side-settings">
                     <p>Settings</p>
+                    <img src="img/icon_setting.png">
                 </div>
             </div>
 
@@ -42,14 +46,32 @@
                     </p>
                 </div>
                 <div class="account">
-                    <p><img src="img/Avatar.png" alt="">Kevin Peredo</p>
+                    <img src="img/Avatar.png" alt="">
+                    <p>Kevin Peredo</p>
+                    <button type="button">Logout</button>
                 </div>
             </div>
         </div>
         <div class="row-2">
             <div class="container">
                 <div class="graph"></div>
-                <div class="status"></div>
+                <div class="status">
+                    <div class="title">System Status</div>
+                    <div>
+                        Indicating System
+                        <label class="switch" id="ind-sys">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div>
+                        Sensing System
+                        <label class="switch" id="sens-sys">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
