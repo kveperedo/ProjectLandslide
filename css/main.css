@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body, html, p {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+}
+
+/* ----------------------------CONTAINER------------------------------- */
+
+.container {
+    width: 100%;
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ------------------------------SIDE BAR-------------------------------- */
+
+.sidebar {
+    background-color: white;
+    height: 100vh;
+    width: 18%;
+}
+
+.sidebar .navigation {
+    height: 80%;
+    position: relative;
+    padding-top: 50px;
+}
+
+.sidebar .logo {
+    height: 20%;
+}
+
+.sidebar .list {
+    width: 100%;
+    color: #444;
+    font-size: 20px; 
+    height: 50px;
+}
+
+.sidebar .list {
+    position: relative;
+    left: 25px;
+}
+
+.sidebar p {
+    width: 80%;
+    display: inline;
+}
+
+.sidebar .bar {
+    width: 5px;
+    color: #1A038C;
+}
+
+.sidebar .logo p {
+    color: #1A038C;
+    font-weight: bolder;
+    font-size: 30px;
+    padding-left: 25px;
+    margin: 0;
+}
+
+.sidebar #img-home {
+    position: absolute;
+    width: 20px;
+    left: 225px;
+}
+
+/* ----------------------------MAIN BAR-------------------------------- */
+
+.mainbar {
+    background-color: #E6EBFF;
+    height: 100vh;
+    width: 82%;
+}
+
+.mainbar .row-1 {
+    width: 100%;
+    height: 100px;
+    /* background-color: lightgrey; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mainbar .row-1 .overview {
+    padding: 10px;
+    background-color: white;
+    width: 10%;
+    height: 40px;
+    margin: auto 0;
+    display: flex;
+}
+
+.overview p {
+    justify-self: center;   
+    margin: auto;
+    font-weight: bolder;
+}
+
+.mainbar .row-1 .location {
+    padding: 10px;
+    background-color: white;
+    width: 50%;
+    height: 40px;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.location p {
+    margin: auto;
+}
+
+.location img {
+    width: 15px;
+    padding-left: 5px;  
+}
+
+.mainbar .row-1 .account {
+    padding: 10px;
+    background-color: white;
+    width: 30%;
+    height: 40px;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.account p {
+    margin: auto;
+}
+
+.mainbar .row-2 {
+    width: 100%;
+    height: 370px;
+    /* background-color: lightcyan; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainbar .row-2 .graph {
+    height: 350px;
+    width: 70%;
+    background-color: white;
+    margin: auto 0;
+
+}
+
+.mainbar .row-2 .status {
+    height: 350px;
+    width: 27%;
+    background-color: white;
+    margin: auto 0;
+}
