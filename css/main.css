@@ -189,7 +189,7 @@ body {
 
 .mainbar .row-2 .graph {
     height: 350px;
-    width: 70%;
+    width: 80%;
     background-color: white;
     margin: auto 0;
 
@@ -199,7 +199,7 @@ body {
 
 .mainbar .row-2 .status {
     height: 350px;
-    width: 27%;
+    width: 17%;
     background-color: white;
     margin: auto 0;
     display: flex;
@@ -212,7 +212,16 @@ body {
 
 .mainbar .row-2 .status .title {
     font-size: 1.1rem;
-    height: 10%;
+    margin: 25px auto 10px auto;
+    font-weight: bolder;
+}
+
+.mainbar .row-2 .status .indicating label {
+    margin-top: 25px;
+}
+
+.mainbar .row-2 .status .sensing label {
+    margin-top: 25px;
 }
 
 .switch {
