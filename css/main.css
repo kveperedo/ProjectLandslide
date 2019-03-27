@@ -171,11 +171,9 @@ body {
     outline: none;
     padding: 10px 25px;
     cursor: pointer;
+    font-family: Ubuntu;
 }
 
-.account button:hover {
-    background-color: white;
-}
 
 .mainbar .row-2 {
     width: 100%;
