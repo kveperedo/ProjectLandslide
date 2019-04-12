@@ -20,31 +20,39 @@ let sideDash = document.getElementById('sideDash')
 let sideAcc = document.getElementById('sideAcc')
 let sideSettings = document.getElementById('sideSettings')
 
-// Remove all other windows
-let removeWindow = function () {
+// Remove all other windows and icons
+let removeStuff = function () {
     mainBar.forEach(function (main) {
         main.style.display = 'none'
     })
+    document.getElementById('iconHome').src = 'img/icon_home.png'
+    document.getElementById('iconDash').src = 'img/icon_dashboard.png'
+    document.getElementById('iconAcc').src = 'img/icon_customers.png'
+    document.getElementById('iconSettings').src = 'img/icon_setting.png'
 }
 
 sideHome.addEventListener('click', function () {
-    removeWindow()
+    removeStuff()
     mainHome.style.display = 'block'
+    document.getElementById('iconHome').src = 'img/icon_home_active.png'
 })
 
 sideDash.addEventListener('click', function () {
-    removeWindow()
+    removeStuff()
     mainDashboard.style.display = 'block'
+    document.getElementById('iconDash').src = 'img/icon_dashboard_active.png'
 })
 
 sideAcc.addEventListener('click', function () {
-    removeWindow()
+    removeStuff()
     mainAcc.style.display = 'block'
+    document.getElementById('iconAcc').src = 'img/icon_customers_active.png'
 })
 
 sideSettings.addEventListener('click', function () {
-    removeWindow()
+    removeStuff()
     mainSettings.style.display = 'block'
+    document.getElementById('iconSettings').src = 'img/icon_setting_active.png'
 })
 
 //Turn on and off Indicating System
@@ -57,15 +65,16 @@ indSystemButton.addEventListener('change', function () {
         //use shit to turn on arduino
     } else {
         let result = confirm(`Turn off Indicating System?`)
-        if (!result) {
-            indSystemButton.checked = true
-            console.log(indSystemButton.checked)
-            //use shit to turn off arduino
-        } else {
-            indSystemButton.checked = false
-            console.log(this.checked)
-            //arduino stays on
-        }
+        console.log(result)
+        // if (!result) {
+        //     indSystemButton.checked = true
+        //     console.log(indSystemButton.checked)
+        //     //use shit to turn off arduino
+        // } else {
+        //     indSystemButton.checked = false
+        //     console.log(this.checked)
+        //     //arduino stays on
+        // }
     }
 })
 
