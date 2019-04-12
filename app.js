@@ -20,6 +20,7 @@ let sideDash = document.getElementById('sideDash')
 let sideAcc = document.getElementById('sideAcc')
 let sideSettings = document.getElementById('sideSettings')
 
+// Remove all other windows
 let removeWindow = function () {
     mainBar.forEach(function (main) {
         main.style.display = 'none'
@@ -44,4 +45,48 @@ sideAcc.addEventListener('click', function () {
 sideSettings.addEventListener('click', function () {
     removeWindow()
     mainSettings.style.display = 'block'
+})
+
+//Turn on and off Indicating System
+let indSystemButton = document.getElementById('indInput')
+
+indSystemButton.addEventListener('change', function () {
+    if (this.checked === true) {
+        indSystemButton.checked = true
+        console.log(indSystemButton.checked)
+        //use shit to turn on arduino
+    } else {
+        let result = confirm(`Turn off Indicating System?`)
+        if (!result) {
+            indSystemButton.checked = true
+            console.log(indSystemButton.checked)
+            //use shit to turn off arduino
+        } else {
+            indSystemButton.checked = false
+            console.log(this.checked)
+            //arduino stays on
+        }
+    }
+})
+
+//Turn on and off Sensing System
+let sensSystemButton = document.getElementById('sensInput')
+
+sensSystemButton.addEventListener('change', function () {
+    if (this.checked === true) {
+        sensSystemButton.checked = true
+        console.log(sensSystemButton.checked)
+        //use shit to turn on arduino
+    } else {
+        let result = confirm(`Turn off Sensing System?`)
+        if (!result) {
+            sensSystemButton.checked = true
+            console.log(sensSystemButton.checked)
+            //use shit to turn off arduino
+        } else {
+            sensSystemButton.checked = false
+            console.log(this.checked)
+            //arduino stays on
+        }
+    }
 })
