@@ -1,0 +1,35 @@
+body {
+    background: url(img/frontend.jpg);
+    background-size: cover;
+}
+.welcome{
+    font-size: 100px;
+    color: black;
+    padding-left: 20px;
+    margin: 0px;
+}
+.centraloffice {
+    font-size: 20px;
+    color: black;
+    padding-left: 20px;
+}
+
+
+.formtag{
+    margin: 100px 75%;
+    color: black;
+}
+.btn-primary{
+    margin: 20px 140px;
+}
+
+.signin{
+    width: 60px;
+    margin-top: 20px;
+    margin-left: 55px;
+    background: #E6EBFF;
+}
+.pw{
+    margin-top: 20px;
+    margin-left: 4px;
+}
