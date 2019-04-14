@@ -314,5 +314,8 @@ input:checked + .slider:before {
 /* ------LOGIN PAGE-------- */
 
 #loginPage {
+    width: 100%;
     display: none;
+    color: black
+    background-size: cover;
 }
