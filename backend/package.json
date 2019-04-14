@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,18 @@
   },
   "homepage": "https://github.com/kveperedo/ProjectLandslide#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "johnny-five": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^1.0.0",
+    "mongoose": "^5.5.1",
     "node-dweetio": "0.0.11",
+    "restify": "^8.3.0",
+    "restify-cors-middleware": "^1.1.1",
+    "restify-jwt-community": "^1.0.11",
     "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
   }
 }
