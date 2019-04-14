@@ -8,84 +8,90 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="sidebar">
-            <div class="navigation" id="sideBar">
-                <div class="list" id="sideHome">
-                    <p>Home</p>
-                    <img src="img/icon_home.png" id="iconHome">
-                </div>
-                <div class="list sideEffect" id="sideDash">
-                    <p>Dashboard</p>
-                    <img src="img/icon_dashboard_active.png" id="iconDash">
-                </div>
-                <div class="list" id="sideAcc">
-                    <p>Account</p>
-                    <img src="img/icon_customers.png" id="iconAcc">
-                </div>
-                <div class="list" id="sideSettings">
-                    <p>Settings</p>
-                    <img src="img/icon_setting.png" id="iconSettings">
-                </div>
-            </div>
-
-            <div class="logo">
-                <p>Project</p>
-                <p>Landslide</p>
-            </div>
-    </div>
-
-    <div class="mainbar " id="mainDashboard">
-        <div class="row-1">
-            <div class="container">
-                <div class="overview">
-                    <p>Overview</p>
-                </div>
-                <div class="location">
-                    <p>Specific Location Found Here
-                        <img src="img/icon_down-arrow-small.png" alt="">
-                    </p>
-                </div>
-                <div class="account">
-                    <img src="img/Avatar.png" alt="">
-                    <p>Kevin Peredo</p>
-                    <button type="button">Logout</button>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="container">
-                <div class="graph"></div>
-                <div class="status">
-                    <div class="title">System Status</div>
-                    <div class="indicating">
-                        Indicating System
-                        <label class="switch" id="ind-sys">
-                            <input type="checkbox" checked id='indInput'>
-                            <span class="slider"></span>
-                        </label>
+    <div id="mainPage">
+        <div class="sidebar">
+                <div class="navigation" id="sideBar">
+                    <div class="list" id="sideHome">
+                        <p>Home</p>
+                        <img src="img/icon_home.png" id="iconHome">
                     </div>
-                    <div class="sensing">
-                        Sensing System
-                        <label class="switch" id="sens-sys">
-                                <input type="checkbox" checked id='sensInput'>
+                    <div class="list sideEffect" id="sideDash">
+                        <p>Dashboard</p>
+                        <img src="img/icon_dashboard_active.png" id="iconDash">
+                    </div>
+                    <div class="list" id="sideAcc">
+                        <p>Account</p>
+                        <img src="img/icon_customers.png" id="iconAcc">
+                    </div>
+                    <div class="list" id="sideSettings">
+                        <p>Settings</p>
+                        <img src="img/icon_setting.png" id="iconSettings">
+                    </div>
+                </div>
+
+                <div class="logo">
+                    <p>Project</p>
+                    <p>Landslide</p>
+                </div>
+        </div>
+
+        <div class="mainbar " id="mainDashboard">
+            <div class="row-1">
+                <div class="container">
+                    <div class="overview">
+                        <p>Overview</p>
+                    </div>
+                    <div class="location">
+                        <p>Specific Location Found Here
+                            <img src="img/icon_down-arrow-small.png" alt="">
+                        </p>
+                    </div>
+                    <div class="account">
+                        <img src="img/Avatar.png" alt="">
+                        <p>Kevin Peredo</p>
+                        <button type="button" id='logoutButton'>Logout</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="container">
+                    <div class="graph"></div>
+                    <div class="status">
+                        <div class="title">System Status</div>
+                        <div class="indicating">
+                            Indicating System
+                            <label class="switch" id="ind-sys">
+                                <input type="checkbox" checked id='indInput'>
                                 <span class="slider"></span>
                             </label>
+                        </div>
+                        <div class="sensing">
+                            Sensing System
+                            <label class="switch" id="sens-sys">
+                                    <input type="checkbox" checked id='sensInput'>
+                                    <span class="slider"></span>
+                                </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="mainbar" id="mainHome">
+
+        </div>
+
+        <div class="mainbar" id="mainAcc">
+
+        </div>
+
+        <div class="mainbar" id="mainSettings">
+
+        </div>
     </div>
 
-    <div class="mainbar" id="mainHome">
-
-    </div>
-
-    <div class="mainbar" id="mainAcc">
-
-    </div>
-
-    <div class="mainbar" id="mainSettings">
-
+    <div id="loginPage">
+        
     </div>
 
     <script src="app.js"></script>

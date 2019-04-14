@@ -1,5 +1,5 @@
 // Change Navigation Effect
-let sideParent = document.getElementById('sideBar')
+const sideParent = document.getElementById('sideBar')
 
 sideParent.addEventListener('click', function (side) {
     if (side.target !== side.currentTarget) {
@@ -10,18 +10,18 @@ sideParent.addEventListener('click', function (side) {
 })
 
 // Change Window depending on Navigation
-let mainBar = document.querySelectorAll('div.mainbar')
-let mainHome = document.getElementById('mainHome')
-let mainDashboard = document.getElementById('mainDashboard')
-let mainSettings = document.getElementById('mainSettings')
-let mainAcc = document.getElementById('mainAcc')
-let sideHome = document.getElementById('sideHome')
-let sideDash = document.getElementById('sideDash')
-let sideAcc = document.getElementById('sideAcc')
-let sideSettings = document.getElementById('sideSettings')
+const mainBar = document.querySelectorAll('div.mainbar')
+const mainHome = document.getElementById('mainHome')
+const mainDashboard = document.getElementById('mainDashboard')
+const mainSettings = document.getElementById('mainSettings')
+const mainAcc = document.getElementById('mainAcc')
+const sideHome = document.getElementById('sideHome')
+const sideDash = document.getElementById('sideDash')
+const sideAcc = document.getElementById('sideAcc')
+const sideSettings = document.getElementById('sideSettings')
 
 // Remove all other windows and icons
-let removeStuff = function () {
+const removeStuff = function () {
     mainBar.forEach(function (main) {
         main.style.display = 'none'
     })
@@ -56,7 +56,7 @@ sideSettings.addEventListener('click', function () {
 })
 
 //Turn on and off Indicating System
-let indSystemButton = document.getElementById('indInput')
+const indSystemButton = document.getElementById('indInput')
 
 indSystemButton.addEventListener('change', function () {
     if (this.checked === true) {
@@ -66,20 +66,20 @@ indSystemButton.addEventListener('change', function () {
     } else {
         let result = confirm(`Turn off Indicating System?`)
         console.log(result)
-        // if (!result) {
-        //     indSystemButton.checked = true
-        //     console.log(indSystemButton.checked)
-        //     //use shit to turn off arduino
-        // } else {
-        //     indSystemButton.checked = false
-        //     console.log(this.checked)
-        //     //arduino stays on
-        // }
+        if (!result) {
+            indSystemButton.checked = true
+            console.log(indSystemButton.checked)
+            //use shit to turn off arduino
+        } else {
+            indSystemButton.checked = false
+            console.log(this.checked)
+            //arduino stays on
+        }
     }
 })
 
 //Turn on and off Sensing System
-let sensSystemButton = document.getElementById('sensInput')
+const sensSystemButton = document.getElementById('sensInput')
 
 sensSystemButton.addEventListener('change', function () {
     if (this.checked === true) {
@@ -98,4 +98,14 @@ sensSystemButton.addEventListener('change', function () {
             //arduino stays on
         }
     }
+})
+
+// Login Page
+const mainPage = document.getElementById('mainPage')
+const loginPage = document.getElementById('loginPage')
+const logoutButton = document.getElementById('logoutButton')
+
+logoutButton.addEventListener('click', function() {
+    mainPage.style.display = 'none'
+    loginPage.style.display = 'block'
 })

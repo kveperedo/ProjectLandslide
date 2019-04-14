@@ -21,6 +21,12 @@ body {
     justify-content: space-between;
 }
 
+/* -----MAIN PAGE----------- */
+#mainPage {
+    display: flex;
+    width: 100%;
+}
+
 /* ------------------------------SIDE BAR-------------------------------- */
 
 .sidebar {
@@ -51,8 +57,12 @@ body {
     cursor: pointer;
 }
 
-.list > * {
+.list > *:active {
     pointer-events: none;
+}
+
+.list > *:hover {
+    font-weight: bolder;
 }
 
 .sidebar p {
@@ -282,6 +292,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+
 /*----------MAIN BAR (HOME)----------------*/
 
 #mainHome {
@@ -297,5 +308,11 @@ input:checked + .slider:before {
 /*----------MAIN BAR (SETTINGS)----------------*/
 
 #mainSettings {
+    display: none;
+}
+
+/* ------LOGIN PAGE-------- */
+
+#loginPage {
     display: none;
 }
