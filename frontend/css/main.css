@@ -21,12 +21,6 @@ body {
     justify-content: space-between;
 }
 
-/* -----MAIN PAGE----------- */
-#mainPage {
-    display: flex;
-    width: 100%;
-}
-
 /* ------------------------------SIDE BAR-------------------------------- */
 
 .sidebar {
@@ -36,13 +30,16 @@ body {
 }
 
 .sidebar .navigation {
-    height: 80%;
+    height: 70%;
     position: relative;
     padding-top: 50px;
 }
 
 .sidebar .logo {
-    height: 20%;
+    height: 30%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
 }
 
 .sidebar .list {
@@ -81,6 +78,7 @@ body {
     background-color: #F2F2F2;
     border-left: 5px solid #1A038C;
     cursor: default;
+    transition: .2s;
 }
 
 .sidebar .sideEffect p {
@@ -96,9 +94,9 @@ body {
 .sidebar .logo p {
     color: #1A038C;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 25px;
-    margin: 0;
+    margin: auto 0;
 }
 
 .sidebar #img-home {
@@ -180,17 +178,6 @@ body {
 .account p {
     margin: auto;
 }
-
-.account button {
-    background-color: #FB2626;
-    color: white;
-    border: none;
-    outline: none;
-    padding: 10px 25px;
-    cursor: pointer;
-    font-family: Ubuntu;
-}
-
 
 .mainbar .row-2 {
     width: 100%;
@@ -292,6 +279,11 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* -----MAIN PAGE----------- */
+#mainPage {
+    display: flex;
+    width: 100%;
+}
 
 /*----------MAIN BAR (HOME)----------------*/
 
@@ -309,9 +301,16 @@ input:checked + .slider:before {
 
 #mainSettings {
     display: none;
+    
 }
 
 /* ------LOGIN PAGE-------- */
+
+.loginContainer {
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+}
 
 #loginPage {
     display: none;
@@ -319,19 +318,82 @@ input:checked + .slider:before {
     height: 100vh;
     background: url(../img/frontend.jpg);
     background-size: cover;
+    transition: .4s;
 }
 
 #loginBox {
-    width: 30%;
+    width: 25%;
     height: 70%;
     margin: auto;
     text-align: center;
     background-color: white;
-    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 }
 
-.welcome {
+.loginHeader {
+    /* background-color: #3C4CB1; */
+    background-image: url(../img/frontend2.jpg);
+    height: 40%;
+    background-size: 120%;
+}
+
+.loginMessage {
+    color: white;
     margin: 0;
-    height: 200px;
+    padding: 10% 0;
+    font-size: 2.5em;
+    font-weight: bolder;
+    letter-spacing: 10px;
+}
+
+.loginDesc {
+    color: #E6EBFF;
+    padding: 0 30px;
+    line-height: 2em;
+    padding-bottom
+}
+
+.loginButton {
+    margin-top: 60px;
+    color: white;
+    border: none;
     background-color: #3C4CB1;
+    font-family: Ubuntu;
+    width: 200px;
+    height: 40px;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    transition: .4s;
+}
+
+.loginButton:hover {
+    border: 2px solid #3C4CB1;
+    color: #3C4CB1;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.userInput {
+    /* margin-top: 10px; */
+    background-color: #E9E9E9;
+    width: 100%;
+    height: 40px;
+    border-style: solid;
+    border-width: 0 0 0 5px;
+    border-color: #3C4CB1;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0 auto;
+    font-family: Ubuntu;
+}
+
+.formTag {
+    height: 60%;
+}
+
+.formTag p {
+    margin-top: 10%;
+    text-align: left;
+    font-weight: bolder;
 }

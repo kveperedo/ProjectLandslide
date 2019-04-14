@@ -2,7 +2,7 @@
 const sideParent = document.getElementById('sideBar')
 
 sideParent.addEventListener('click', function (side) {
-    if (side.target !== side.currentTarget) {
+    if (side.target !== side.currentTarget && side.target !== sideLogout) {
         document.querySelector(".sideEffect").classList.remove("sideEffect")
         side.target.classList.add('sideEffect')
     }
@@ -19,6 +19,7 @@ const sideHome = document.getElementById('sideHome')
 const sideDash = document.getElementById('sideDash')
 const sideAcc = document.getElementById('sideAcc')
 const sideSettings = document.getElementById('sideSettings')
+const sideLogout = document.getElementById('sideLogout')
 
 // Remove all other windows and icons
 const removeStuff = function () {
@@ -103,9 +104,13 @@ sensSystemButton.addEventListener('change', function () {
 // Login Page
 const mainPage = document.getElementById('mainPage')
 const loginPage = document.getElementById('loginPage')
-const logoutButton = document.getElementById('logoutButton')
+const loginButton = document.getElementById('loginButton')
 
-logoutButton.addEventListener('click', function() {
+sideLogout.addEventListener('click', function () {
+    let result = confirm('Are you sure you want to logout?')
+    if (result) {
     mainPage.style.display = 'none'
     loginPage.style.display = 'flex'
+    }
 })
+
