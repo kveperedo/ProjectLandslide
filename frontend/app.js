@@ -107,5 +107,5 @@ const logoutButton = document.getElementById('logoutButton')
 
 logoutButton.addEventListener('click', function() {
     mainPage.style.display = 'none'
-    loginPage.style.display = 'block'
+    loginPage.style.display = 'flex'
 })

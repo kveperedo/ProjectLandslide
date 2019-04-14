@@ -314,8 +314,24 @@ input:checked + .slider:before {
 /* ------LOGIN PAGE-------- */
 
 #loginPage {
-    width: 100%;
     display: none;
-    color: black
+    width: 100%;
+    height: 100vh;
+    background: url(../img/frontend.jpg);
     background-size: cover;
+}
+
+#loginBox {
+    width: 30%;
+    height: 70%;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.welcome {
+    margin: 0;
+    height: 200px;
+    background-color: #3C4CB1;
 }
