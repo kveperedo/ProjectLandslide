@@ -65,17 +65,23 @@ indSystemButton.addEventListener('change', function () {
         console.log(indSystemButton.checked)
         //use shit to turn on arduino
     } else {
-        let result = confirm(`Turn off Indicating System?`)
-        console.log(result)
-        if (!result) {
-            indSystemButton.checked = true
-            console.log(indSystemButton.checked)
-            //use shit to turn off arduino
-        } else {
-            indSystemButton.checked = false
-            console.log(this.checked)
-            //arduino stays on
-        }
+        Swal.fire({
+            title: 'Turn off Indicating System?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            confirmButtonColor: '#3C4CB1',
+            cancelButtonText: 'No',
+            cancelButtonColor: '#FF6565',
+        }).then((result) => {
+            if (result.value) {
+                indSystemButton.checked = false
+                //arduino stays on
+            } else {
+                indSystemButton.checked = true
+                //use shit to turn off arduino
+            }
+        })
     }
 })
 
@@ -88,29 +94,58 @@ sensSystemButton.addEventListener('change', function () {
         console.log(sensSystemButton.checked)
         //use shit to turn on arduino
     } else {
-        let result = confirm(`Turn off Sensing System?`)
-        if (!result) {
-            sensSystemButton.checked = true
-            console.log(sensSystemButton.checked)
-            //use shit to turn off arduino
-        } else {
-            sensSystemButton.checked = false
-            console.log(this.checked)
-            //arduino stays on
-        }
+        Swal.fire({
+            title: 'Turn off Sensing System?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            confirmButtonColor: '#3C4CB1',
+            cancelButtonText: 'No',
+            cancelButtonColor: '#FF6565',
+        }).then((result) => {
+            if (result.value) {
+                sensSystemButton.checked = false
+                //arduino stays on
+            } else {
+                sensSystemButton.checked = true
+                //use shit to turn off arduino
+            }
+        })
     }
 })
 
 // Login Page
 const mainPage = document.getElementById('mainPage')
 const loginPage = document.getElementById('loginPage')
-const loginButton = document.getElementById('loginButton')
 
 sideLogout.addEventListener('click', function () {
-    let result = confirm('Are you sure you want to logout?')
-    if (result) {
-    mainPage.style.display = 'none'
-    loginPage.style.display = 'flex'
-    }
+    // let result = confirm('Are you sure you want to logout?')
+    // if (result) {
+    // mainPage.style.display = 'none'
+    // loginPage.style.display = 'flex'
+    // }
+    Swal.fire({
+        title: 'Are you sure you want to logout?',
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        confirmButtonColor: '#3C4CB1',
+        cancelButtonText: 'No',
+        cancelButtonColor: '#FF6565',
+        scrollbarPadding: 'true',
+      }).then((result) => {
+        if (result.value) {
+            mainPage.style.display = 'none'
+            loginPage.style.display = 'flex'
+        }
+    })
 })
 
+document.querySelector('#loginForm').addEventListener('submit', function(e) {
+    // e.preventDefault()
+    document.querySelectorAll('.userInput').forEach(function (input) {
+        input.value = ''
+    })
+})
+
+//Turn off/on popups
