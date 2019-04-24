@@ -148,4 +148,7 @@ document.querySelector('#loginForm').addEventListener('submit', function(e) {
     })
 })
 
-//Turn off/on popups
+// Date
+const dateToday = new Date()
+console.log(dateToday.getMonth())
+console.log(dateToday.getDate())
