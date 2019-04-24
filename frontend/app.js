@@ -13,12 +13,12 @@ sideParent.addEventListener('click', function (side) {
 const mainBar = document.querySelectorAll('div.mainbar')
 const mainHome = document.getElementById('mainHome')
 const mainDashboard = document.getElementById('mainDashboard')
-const mainSettings = document.getElementById('mainSettings')
+const mainContacts = document.getElementById('mainContacts')
 const mainAcc = document.getElementById('mainAcc')
 const sideHome = document.getElementById('sideHome')
 const sideDash = document.getElementById('sideDash')
 const sideAcc = document.getElementById('sideAcc')
-const sideSettings = document.getElementById('sideSettings')
+const sideContacts = document.getElementById('sideContacts')
 const sideLogout = document.getElementById('sideLogout')
 
 // Remove all other windows and icons
@@ -29,7 +29,7 @@ const removeStuff = function () {
     document.getElementById('iconHome').src = 'img/icon_home.png'
     document.getElementById('iconDash').src = 'img/icon_dashboard.png'
     document.getElementById('iconAcc').src = 'img/icon_customers.png'
-    document.getElementById('iconSettings').src = 'img/icon_setting.png'
+    document.getElementById('iconContacts').src = 'img/icon_contacts.png'
 }
 
 sideHome.addEventListener('click', function () {
@@ -50,10 +50,10 @@ sideAcc.addEventListener('click', function () {
     document.getElementById('iconAcc').src = 'img/icon_customers_active.png'
 })
 
-sideSettings.addEventListener('click', function () {
+sideContacts.addEventListener('click', function () {
     removeStuff()
-    mainSettings.style.display = 'block'
-    document.getElementById('iconSettings').src = 'img/icon_setting_active.png'
+    mainContacts.style.display = 'block'
+    document.getElementById('iconContacts').src = 'img/icon_contacts_active.png'
 })
 
 //Turn on and off Indicating System

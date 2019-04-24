@@ -1,0 +1,74 @@
+.row-1-contacts {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-title {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-title p {
+    justify-self: center;   
+    margin: auto;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.row-2-contacts {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-police, .contact-hospital, .contact-info {
+    background-color: white;
+    padding: 10px;
+    justify-content: center;
+    width: 25%;
+    height: 460px;
+    margin: auto 0;
+    display: flex;
+    flex-flow: column;
+}
+
+.contact-hospital {
+    width: 38%;
+}
+
+
+.title-p, .title-h, .title-i {
+    width: 100%;
+    height: 20%;
+    margin: auto 0px;
+    display: flex
+}
+
+.title-p p, .title-h p, .title-i p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin: auto 0;
+    width: 100%;
+}
+
+.content-p, .content-h, .content-i {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;  
+}
+
+.content-p p, .content-h p, .content-i p {
+    margin: auto;
+    font-size: 1.1em;
+}
+

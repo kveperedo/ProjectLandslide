@@ -116,7 +116,6 @@ body {
 .mainbar .row-1 {
     width: 100%;
     height: 100px;
-    /* background-color: lightgrey; */
     display: flex;
     justify-content: space-evenly;
 }
@@ -297,9 +296,9 @@ input:checked + .slider:before {
     display: none;
 }
 
-/*----------MAIN BAR (SETTINGS)----------------*/
+/*----------MAIN BAR (CONTACTS)----------------*/
 
-#mainSettings {
+#mainContacts {
     display: none;
     
 }
@@ -354,7 +353,7 @@ input:checked + .slider:before {
 }
 
 .loginButton {
-    margin-top: 60px;
+    margin-top: 5%;
     color: white;
     border: none;
     background-color: #3C4CB1;
