@@ -60,13 +60,17 @@ sideContacts.addEventListener('click', function () {
 const indSystemButton = document.getElementById('indInput')
 
 indSystemButton.addEventListener('change', function () {
-    if (this.checked === true) {
-        indSystemButton.checked = true
+    if (!this.checked === true) {
+        indSystemButton.checked = false
         console.log(indSystemButton.checked)
         //use shit to turn on arduino
+        socket.emit('chat', {
+            message: `Turned off Indicating System`,
+            indStatus: false,
+        })  
     } else {
         Swal.fire({
-            title: 'Turn off Indicating System?',
+            title: 'Turn on Indicating System?',
             type: 'warning',
             showCancelButton: true,
             confirmButtonText: 'Yes',
@@ -75,11 +79,16 @@ indSystemButton.addEventListener('change', function () {
             cancelButtonColor: '#FF6565',
         }).then((result) => {
             if (result.value) {
-                indSystemButton.checked = false
-                //arduino stays on
-            } else {
                 indSystemButton.checked = true
                 //use shit to turn off arduino
+                socket.emit('chat', {
+                    message: `Turned on Indicating System`,
+                    indStatus: true,
+                })
+            } else {
+                indSystemButton.checked = false
+                //arduino stays on
+
             }
         })
     }
@@ -93,6 +102,10 @@ sensSystemButton.addEventListener('change', function () {
         sensSystemButton.checked = true
         console.log(sensSystemButton.checked)
         //use shit to turn on arduino
+        socket.emit('chat', {
+            message: `Turned on Sensing System`,
+            sensStatus: true,
+        })
     } else {
         Swal.fire({
             title: 'Turn off Sensing System?',
@@ -105,10 +118,14 @@ sensSystemButton.addEventListener('change', function () {
         }).then((result) => {
             if (result.value) {
                 sensSystemButton.checked = false
-                //arduino stays on
+                //use shit to turn off arduino
+                socket.emit('chat', {
+                    message: `Turned off Sensing System`,
+                    sensStatus: false,
+                })
             } else {
                 sensSystemButton.checked = true
-                //use shit to turn off arduino
+                //arduino stays on
             }
         })
     }
@@ -147,8 +164,3 @@ document.querySelector('#loginForm').addEventListener('submit', function(e) {
         input.value = ''
     })
 })
-
-// Date
-const dateToday = new Date()
-console.log(dateToday.getMonth())
-console.log(dateToday.getDate())

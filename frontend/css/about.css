@@ -1,0 +1,34 @@
+.about-1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.about-2 {
+    width:100%;
+    height: 50%; 
+    background: black;
+    display: flex;
+}
+
+.main-pic {
+    height: 80%;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-pic img {
+    width: 200px;
+    margin: auto;
+}
+
+.main-pic p {
+    margin: auto;
+}
+
+.about-name {
+    font-size: 1.1em;
+    font-weight: bolder;
+}

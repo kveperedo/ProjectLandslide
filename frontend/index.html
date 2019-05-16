@@ -6,49 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landslide Prevention HQ</title>
     <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/main.css   ">
+    <link rel="stylesheet" href="css/morris.css">
     <link rel="stylesheet" href="css/contacts.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <div id="mainPage">
         <div class="sidebar">
-            <div class="navigation" id="sideBar">
-                <div class="list" id="sideHome">
-                    <p>Home</p>
-                    <img src="img/icon_home.png" id="iconHome">
+                <div class="navigation" id="sideBar">
+                    <div class="list" id="sideHome">
+                        <p>Home</p>
+                        <img src="img/icon_home.png" id="iconHome">
+                    </div>
+                    <div class="list sideEffect" id="sideDash">
+                        <p>Dashboard</p>
+                        <img src="img/icon_dashboard_active.png" id="iconDash">
+                    </div>
+                    <div class="list" id="sideAcc">
+                        <p>About Us</p>
+                        <img src="img/icon_customers.png" id="iconAcc">
+                    </div>
+                    <div class="list" id="sideContacts">
+                        <p>Contacts</p>
+                        <img src="img/icon_contacts.png" id="iconContacts">
+                    </div>
+                    <div class="list" id="sideLogout">
+                        <p>Logout</p>
+                        <img src="img/icon_circle-remove.png" id="iconSettings">
+                    </div>
                 </div>
-                <div class="list sideEffect" id="sideDash">
-                    <p>Dashboard</p>
-                    <img src="img/icon_dashboard_active.png" id="iconDash">
-                </div>
-                <div class="list" id="sideAcc">
-                    <p>About Us</p>
-                    <img src="img/icon_customers.png" id="iconAcc">
-                </div>
-                <div class="list" id="sideContacts">
-                    <p>Contacts</p>
-                    <img src="img/icon_contacts.png" id="iconContacts">
-                </div>
-                <div class="list" id="sideLogout">
-                    <p>Logout</p>
-                    <img src="img/icon_circle-remove.png" id="iconSettings">
-                </div>
-            </div>
 
-            <div class="logo">
-                <p>Project Landslide</p>
-            </div>
+                <div class="logo">
+                    <p>Project Landslide</p>
+                </div>
         </div>
 
-        <div class="mainbar" id="mainDashboard">
+        <div class="mainbar " id="mainDashboard">
             <div class="row-1">
                 <div class="container">
                     <div class="overview">
                         <p>Overview</p>
                     </div>
                     <div class="location">
-                        <p>Specific Location Found Here
-                            <img src="img/icon_down-arrow-small.png" alt="">
+                        <p class="dataPut">
+                            <!-- <img src="img/icon_down-arrow-small.png" alt=""> -->
                         </p>
                     </div>
                     <div class="account">
@@ -59,13 +61,13 @@
             </div>
             <div class="row-2">
                 <div class="container">
-                    <div class="graph"></div>
+                    <div class="graph" id="morris-graph"></div>
                     <div class="status">
                         <div class="title">System Status</div>
                         <div class="indicating">
                             Indicating System
                             <label class="switch" id="ind-sys">
-                                <input type="checkbox" checked id='indInput'>
+                                <input type="checkbox" id='indInput'>
                                 <span class="slider"></span>
                             </label>
                         </div>
@@ -86,7 +88,55 @@
         </div>
 
         <div class="mainbar" id="mainAcc">
-
+            <div class="about-1">
+                <div class="main-pic">
+                    <img src="img/Avatar.png">
+                    <p class="about-name">Dr. Cynthia Posadas</p>
+                    <p>Promoter</p>
+                </div>
+            </div>
+            <div class="about-2">
+                    <div class="pic-1">
+                        <img src="img/Avatar.png">
+                        <p class="about-name">Name 1</p>
+                        <p>Member</p>
+                    </div>
+                    <div class="pic-2">
+                        <img src="img/Avatar.png">
+                        <p class="about-name">Name 2</p>
+                        <p>Member</p>
+                    </div>
+                    <div class="pic-3">
+                        <img src="img/Avatar.png">
+                        <p class="about-name">Name 3</p>
+                        <p>Member</p>
+                    </div>
+                    <div class="pic-4">
+                        <img src="img/Avatar.png">
+                        <p class="about-name">Name 4</p>
+                        <p>Member</p>
+                    </div>
+                    <div class="pic-5">
+                        <img src="img/Avatar.png">
+                        <p class="about-name">Name 5</p>
+                        <p>Member</p>
+                    </div>
+                    <div class="pic-6">
+                        <img src="img/Avatar.png">
+                        <p class="about-name">Name 6</p>
+                        <p>Member</p>
+                    </div>
+                    <div class="pic-7">
+                        <img src="img/Avatar.png">
+                        <p class="about-name">Name 7</p>
+                        <p>Member</p>
+                    </div>
+                    <div class="pic-8">
+                        <img src="img/Avatar.png">
+                        <p class="about-name">Name 8</p>
+                        <p>Member</p>
+                    </div>
+            </div>
         </div>
 
         <div class="mainbar" id="mainContacts">
@@ -150,25 +200,30 @@
             </div>
             <div class="formTag">
                 <form id="loginForm" action="index.html" method="get">
-                    <div class="loginContainer">
-                        <p id="inputUser">Username</p>
-                        <br>
-                        <input class="userInput" type="text" name="inputUser" for="inputUser" required>
-                    </div>
-                    <div class="loginContainer">
-                        <p id="inputPassword">Password</p>
-                        <br>
-                        <input class="userInput" type="password" name="inputPassword" for="inputPassword" required>
-                    </div>  
-                    <button class="loginButton">login</button>
+                <div class="loginContainer">
+                    <p id="inputUser">Username</p>
+                    <br>
+                    <input class="userInput" type="text" name="inputUser" for="inputUser" required>
+                </div>
+                <div class="loginContainer">
+                    <p id="inputPassword">Password</p>
+                    <br>
+                    <input class="userInput" type="password" name="inputPassword" for="inputPassword" required>
+                </div>  
+                <button class="loginButton">login</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script> -->
+    <script src="jquery.js"></script>
+    <script src="raphael.js"></script>
+    <script src="morris.js"></script>
+    <script src="moment.js"></script>
+    <script src="socket-io.js"></script>
     <script src="popup.js"></script>
     <script src="app.js"></script>
     <script src="login.js"></script>
+    <script src="socket.js"></script>
 </body>
 </html>
