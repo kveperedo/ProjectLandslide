@@ -13,7 +13,7 @@ socket.on('data', (data) => {
         x: moment().format("hh:mm:ss a"),
         z: data1[2],
     })
-    morrisGraph.setData(dataRec);
+    morrisGraph.setData(dataRec)
     if (dataRec.length > 20) {
         dataRec.shift()
     }

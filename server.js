@@ -30,17 +30,9 @@ io.on('connection', (socket) => {
 const myPort = new SerialPort(portName, portConfig)
 
 myPort.on("open", function () {
-    // console.log('open')
     myPort.on('data', function(data) {
         console.log(data.toString('utf8'))
-        // const savedData = `${moment().format("LLLL")} | ${data.toString('utf8')}`
-        // fs.appendFile('test.txt', savedData, (err) => {
-        //     if (err) {
-        //         console.log(err)
-        //     } else {
-        //         console.log(`File Logged.`)
-        //     }
-        // })
+
         writeFile(data.toString('utf8'))
         io.emit('data', data.toString('utf8'))
     })
@@ -70,15 +62,3 @@ const writeFile = (gatheredData) => {
         }   
     })
 }
-
-// fs.readFile('text.json', (err, data) => {
-//     if (err) {
-//         console.log(err)
-//     } else {
-//         let convData = JSON.parse(data)
-//         let summary = convData.forEach((obj) => {
-//             console.log(obj.name)
-//             console.log(obj.gender)
-//         })
-//     }
-// })

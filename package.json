@@ -1,0 +1,26 @@
+{
+  "name": "projectlandslide",
+  "version": "1.0.0",
+  "description": "This is the website where the Sensing System, Indicating System, and Central Office interact with each other.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kveperedo/ProjectLandslide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kveperedo/ProjectLandslide/issues"
+  },
+  "homepage": "https://github.com/kveperedo/ProjectLandslide#readme",
+  "dependencies": {
+    "express": "",
+    "serialport": "",
+    "socket.io": "",
+    "moment": ""
+  }
+}

@@ -1,14 +1,14 @@
 .about-1 {
     width: 100%;
-    height: 50%;
+    height: 40%;
     display: flex;
 }
 
 .about-2 {
-    width:100%;
-    height: 50%; 
-    background: black;
+    width: 100%;
+    height: 60%; 
     display: flex;
+    flex-direction: column;
 }
 
 .main-pic {
@@ -24,11 +24,34 @@
     margin: auto;
 }
 
-.main-pic p {
+.main-pic p, .side-picture p {
+    margin: auto;
+}
+
+.side-picture img {
+    width: 120px;
     margin: auto;
 }
 
 .about-name {
-    font-size: 1.1em;
     font-weight: bolder;
+}
+
+.about-name-side {
+    font-weight: bolder;
+    padding: 1em 0;
+}
+
+.side-picture {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.about-2-side {
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
